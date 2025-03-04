@@ -1,28 +1,9 @@
-/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -47,11 +28,6 @@ hr {
   padding: 0;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
 
 audio,
 canvas,
@@ -62,9 +38,6 @@ video {
   vertical-align: middle;
 }
 
-/*
- * Remove default fieldset styles.
- */
 
 fieldset {
   border: 0;
@@ -72,39 +45,17 @@ fieldset {
   padding: 0;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
 
 textarea {
   resize: vertical;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
 
 .hidden,
 [hidden] {
   display: none !important;
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
 
 .visually-hidden {
   border: 0;
@@ -119,12 +70,6 @@ textarea {
   /* 1 */
 }
 
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
 .visually-hidden.focusable:active,
 .visually-hidden.focusable:focus {
   clip: auto;
@@ -136,20 +81,12 @@ textarea {
   width: auto;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
+
 
 .invisible {
   visibility: hidden;
 }
 
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
 
 .clearfix::before,
 .clearfix::after {
@@ -161,11 +98,7 @@ textarea {
   clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
@@ -178,11 +111,7 @@ textarea {
   /* Style adjustments for high resolution devices */
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+
 
 @media print {
   *,
@@ -208,10 +137,7 @@ textarea {
     content: " (" attr(title) ")";
   }
 
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
+
   a[href^="#"]::after,
   a[href^="javascript:"]::after {
     content: "";
@@ -243,5 +169,365 @@ textarea {
   h3 {
     page-break-after: avoid;
   }
+}
+
+/* CSS Custom Properties */
+
+:root{
+  --main-bg-color: #efefef;
+  --primary-type-color: #222222;
+  --accent-color-1: #999999;
+}
+
+/* ------ Box Sizing -------*/
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* ------ Typography -------*/
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* ------ Fluid Images -------*/
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 5px solid #0077ff;
+}
+
+/* ------ Utility Classes  -------*/
+.container {
+  max-width: 420px; /* Design Time */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* ------ Helper Classes -------*/
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
+
+/* ------ Global Styles -------*/
+
+body {
+  background: #72b4ee;
+  color: var(--primary-type-color);
+  line-height: 1.6;
+}
+
+a:link,
+a:visited {
+  color: var(--primary-type-color);
+}
+
+nav {
+  padding: 1px;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 20px 20px 0px 20px;
+  border-radius: 20px;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a:link, nav a:visited {
+  display: block;
+  padding: 8px 16px;
+  border: 1px solid #000000;
+  text-align: center;
+  text-decoration: none;
+  color: #0077ff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  background: rgba(7, 169, 245, 0.65);
+  transition: background-color 0.5s ease;
+  color: #ffffff;
+}
+
+nav a:hover {
+  background: rgba(243, 219, 3, 0.95);
+}
+
+main {
+  padding: 1px 20px;
+}
+
+main h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-weight: 400;
+  font-variant: small-caps;
+}
+main h1:before,
+main h1:after {
+  background-color: var(--accent-color-1);
+  content: "\a0";
+  flex-grow: 1;
+  height: 1px;
+  position: relative;
+  top: 1.6rem;
+}
+main h1:before {
+  margin-right: 5px;
+}
+main h1:after {
+  margin-left: 5px;
+}
+
+#aboutDetails {
+  display: none; 
+  transition: all 0.3s ease-in-out;
+}
+
+#toggleAbout {
+  cursor: pointer;
+  background: rgba(7, 169, 245, 0.65); 
+  color: white;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  text-align: center;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+#toggleAbout:hover {
+  background: rgba(243, 219, 3, 0.95);
+}
+
+.details {
+  display: none;
+  background: #72b4ee;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+#toggleDetails {
+  display: inline-block;
+  padding: 10px 16px;
+  background: rgba(7, 169, 245, 0.65);
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  text-align: center;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#toggleDetails:hover {
+  background: rgba(243, 219, 3, 0.95);
+}
+
+#skillsDetails {
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+#toggleSkills {
+  cursor: pointer;
+  background: rgba(7, 169, 245, 0.65);
+  color: white;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  text-align: center;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+#toggleSkills:hover {
+  background: rgba(243, 219, 3, 0.95);
+}
+
+#skillsDetails {
+  display: none;
+  background: #72b4ee;
+  padding: 15px 15px 15px 0px;
+  margin-left: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+#skillsDetails ul li {
+  list-style: none;
+}
+
+#skillsDetails li {
+  background: rgba(7, 169, 245, 0.65);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 0.85em;
+  margin: 5px 0;
+  transition: background 0.3s ease;
+}
+
+#experienceDetails {
+  display: none; 
+  background: #72b4ee; 
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+#toggleExperience {
+  cursor: pointer;
+  background: rgba(7, 169, 245, 0.65);
+  color: white;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  text-align: center;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+#toggleExperience:hover {
+  background: rgba(243, 219, 3, 0.95);
+}
+
+#educationDetails {
+  display: none;
+  background: #72b4ee;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+#toggleEducation {
+  cursor: pointer;
+  background: rgba(7, 169, 245, 0.65);
+  color: white;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  text-align: center;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+#toggleEducation:hover {
+  background: rgba(243, 219, 3, 0.95);
+}
+
+
+
+dl {
+  display: grid;
+  /*shorthand*/
+  grid-template: repeat(8, auto) / 8em 1fr;
+  font-size:.9rem;
+}
+
+dt {
+  font-weight: 800;
+  grid-column: 1;
+  padding: 10px 0;
+}
+dd {
+  margin: 0;
+  grid-column: 2;
+  padding: 10px 0;
+  border-bottom: 1px solid #1056a5;
+}
+
+.related-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap:20px;
+}
+
+.related-links a {
+  border: 1px solid var(--accent-color-1);
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #222222;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  background: rgba(0, 0, 0, 0.65);
+  transition: background-color 0.5s ease;
+  color: #fff;
+}
+
+.related-links .svg-inline--fa {
+  font-size: 1.8em;
+  padding-top: 7px;
+}
+
+.related-links a:hover {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+#skills {
+}
+#skills li {
+  list-style-type: square;
+}
+
+
+.job,
+.certificate {
+  border-bottom: 1px solid #1056a5;
+  padding-bottom: 20px;
+}
+
+.job *[itemprop="jobTitle"],
+.job *[itemprop="name"],
+.job *[itemprop="url"],
+.job *[itemprop="addressLocality"],
+.certificate *[itemprop="name"] {
+  display: block;
+}
+
+.job h3 {
+  margin: 20px 0 0 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
 }
 

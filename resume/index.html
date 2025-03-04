@@ -37,114 +37,100 @@
   <!-- Main -->
   <main itemscope itemtype="http://schema.org/Person" class="container">
     <h1 class="page-title">William Ray Morrison</h1>
+
+  </dl>
+  <ul class="related-links">
+    <li><a itemprop="url" rel="me" href="https://github.com/raymorr2004"> github</a></li>
+    <li><a itemprop="url" rel="me" href="http://linkedin.com/profile">linkedin</a></li>
+    <li><a itemprop="url" href="resume.pdf" download>pdf resume</a></li>
+  </ul>
+
     <section id="about">
-      <h2>Personal Details</h2>
+      <h2 id="toggleAbout">Personal Details</h2>
+      <div id="aboutDetails">
       <div class="bio">
       <img itemprop="image" src="img/headshot.jpg" alt="William Morrison">
       <p itemprop="description">William Morrison is a cybersecurity major with an interest in protecting digital systems and uncovering vulnerabilities. With a deep love for computers and coding, they enjoy developing secure applications and analyzing potential threats. William spends his free time reading, messing with code, or gaming with friends.</p>
-      </div>  
+      </div> 
+    </div>
+      <div class="dropdown">
+      <h3 id="toggleDetails">Personal Information</h3>
       <dl class="details">
-        <dt>Name</dt>
+        <dt>Name:</dt>
         <dd itemprop="name">
           <span itemprop="givenName">William</span> <span itemprop="familyName">Morrison</span>
         </dd>
-        <dt>Date of birth</dt>
+        <dt>Date of birth:</dt>
         <dd itemprop="birthDate"><time datetime="2000-10-12">8/7/2004</time></dd>
-        <dt>Nationality</dt>
+        <dt>Nationality:</dt>
         <dd itemprop="nationality">United States</dd>
-        <dt>Location</dt>
+        <dt>Location:</dt>
         <dd itemprop="homeLocation">Arkansas</dd>
-        <dt>Telephone</dt>
+        <dt>Telephone:</dt>
         <dd>
           <a itemprop="telephone" href="tel:555.555.5555">555.555.5555</a>
         </dd>
-        <dt>Email</dt>
+        <dt>Email:</dt>
         <dd>
           <a itemprop="email" href="mailto:email@mail.com">raymorr2004@gmail.com</a>
         </dd>
-        <dt>Address</dt>
+        <dt>Address:</dt>
   
         <dd itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-          <span itemprop="streetAddress">2801 South University</span>
-          <span itemprop="addressLocality">Little Rock</span>
-          <span itemprop="postalCode">72204</span>
+          <span itemprop="streetAddress">25740 Highway 263</span>
+          <span itemprop="addressLocality">Onia</span>
+          <span itemprop="postalCode">72663</span>
           <span itemprop="addressCountry">USA</span>
         </dd>
+
+      </div>
   
-      </dl>
-      <ul class="related-links">
-        <li><a itemprop="url" rel="me" href="https://github.com/profile"> github</a></li>
-        <li><a itemprop="url" rel="me" href="http://linkedin.com/profile">linkedin</a></li>
-        <li><a itemprop="url" href="resume.pdf" download>pdf resume</a></li>
-      </ul>
+
     </section>
     <section id="skills">
-      <h2>Skills</h2>
+      <h2 id="toggleSkills">Skills</h2>
+      <div id="skillsDetails">
       <ul>
         <li class="skill">HTML</li>
         <li class="skill">PHP</li>
         <li class="skill">Java</li>
         <li class="skill">Scss</li>
       </ul>
-      
+    </div>
     </section>
     <section id="experience">
-      <h2>Experience</h2>
+      <h2 id="toggleExperience">Experience</h2>
+
+      <div id="experienceDetails">
       <!-- current job -->
       <article class="job">
-        <h3 itemprop="jobTitle">Lead Web Developer</h3>
+        <h3 itemprop="jobTitle">Computer Building/Repair</h3>
         <div itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
-          <span itemprop="name">Company Name 1</span>
-          <span>February 2010 - Present</span>
-          <p itemprop="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+          <span itemprop="name">N/A</span>
+          <span>August 2016 - Present</span>
+          <p itemprop="description">Specializes in assembling, troubleshooting, and maintaining computers for clients. This involves custom-building PCs for gaming, business, or personal use, ensuring hardware compatibility,
+            and optimizing system performance. this also entails diagnosing and repairing hardware and software issues, such as faulty components, overheating, slow performance, or virus infections. Additionally, this involves providing upgrades,
+            data recovery, and network setup services. Besides computers, this also includes handling client consultations, pricing, and customer service, ensuring that individuals and businesses receive reliable, personalized tech support.</p>
           <span itemprop="location" itemscope itemtype="http://schema.org/Place">
-            <a itemprop="url" href="http://link-to-company.com">Company URL</a>
+            <a itemprop="url" href="http://link-to-company.com">fictionalurl.com</a>
             <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-            <span itemprop="addressLocality">Anywhere,USA</span>
+            <span itemprop="addressLocality">Mountain View,USA</span>
           </span>
           </span>
         </div>
       </article>
-      <!-- Previous Jobs - Notice Slightly Different Format-->
-      <article class="job" itemscope itemtype="http://schema.org/Organization">
-        <h3 itemprop="name">Senior Developer</h3>
-        <span itemprop="location" itemscope itemtype="http://schema.org/Place">
-            <span itemprop="name">Company Name 2</span>
-        <a itemprop="url" href="http://link-to-company.com">Company URL</a>
-        <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-              <span itemprop="addressLocality">Anywhere,USA</span>
-        </span>
-        </span>
-        <div itemscope itemtype="https://schema.org/EmployeeRole">
-        <span itemprop="startDate" content="2006-02-21T20:00">February 2006</span> - 
-        <span itemprop="endDate" content="2009-02-21T20:00">February 2009</span>
-        </div>
-        <p itemprop="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
-      </article>
-     <article class="job" itemscope itemtype="http://schema.org/Organization">
-        <h3 itemprop="name">Senior Developer</h3>
-        <span itemprop="location" itemscope itemtype="http://schema.org/Place">
-            <span itemprop="name">Company Name 2</span>
-        <a itemprop="url" href="http://link-to-company.com">Company URL</a>
-        <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-              <span itemprop="addressLocality">Anywhere,USA</span>
-        </span>
-        </span>
-        <div itemscope itemtype="https://schema.org/EmployeeRole">
-        <span itemprop="startDate" content="2006-02-21T20:00">February 2006</span> - 
-        <span itemprop="endDate" content="2009-02-21T20:00">February 2009</span>
-        </div>
-        <p itemprop="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
-      </article>
+    </div>
     </section>
     <section id="education">
-      <h2>Education</h2>
+      <h2 id="toggleEducation">Education</h2>
+      <div id="educationDetails">
       <article class="certificate" itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-        <h3 itemprop="description"><abbr title="Master of Science">BA</abbr> Web Design and Development</h3>
-        <span itemprop="name">University name 1</span>
-        <span itemprop="location" itemscope>Anywhere, USA</span>
-        <span>2005-2007</span>
+        <h3 itemprop="description"><abbr title="Associate of Science">AS</abbr> Information Science Technologies</h3>
+        <span itemprop="name">Ozarka College</span>
+        <span itemprop="location" itemscope>Mountain View, USA</span>
+        <span>2022-2024</span>
       </article>
+    </div>
     </section>
   </main>
   <!-- Footer -->
@@ -155,6 +141,7 @@
   </footer>
 
   <script src="js/app.js"></script>
+  <script src="js/toggles.js"></script>
 
 </body>
 
