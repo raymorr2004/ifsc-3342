@@ -531,3 +531,157 @@ footer {
   padding: 20px 0;
 }
 
+
+/**Tablet View**/
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  
+  .container {
+    max-width: 90%;
+    margin: auto;
+  }
+
+
+  nav.primary ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  nav.primary ul li {
+    display: inline;
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  .bio {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .bio img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .bio p {
+    max-width: 70%;
+  }
+
+  #skillsDetails ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .job {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  #experienceDetails,
+  #educationDetails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+/**Laptop and Small Desktop view**/
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  
+  .container {
+    max-width: 70%;
+    margin: auto;
+  }
+
+  nav.primary ul {
+    gap: 30px;
+  }
+
+  body {
+    font-size: 20px;
+  }
+
+  .bio {
+    gap: 40px;
+  }
+
+  .bio img {
+    width: 200px;
+  }
+
+  .bio p {
+    max-width: 60%;
+  }
+
+  #skillsDetails ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #experienceDetails,
+  #educationDetails {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer {
+    padding: 30px;
+  }
+}
+
+/**Desktop view**/
+
+@media screen and (min-width: 1440px) {
+  
+  .container {
+    max-width: 60%;
+    margin: auto;
+  }
+
+  nav.primary ul {
+    gap: 40px;
+  }
+
+  body {
+    font-size: 22px;
+  }
+
+  .bio {
+    gap: 50px;
+  }
+
+  .bio img {
+    width: 220px;
+  }
+
+  .bio p {
+    max-width: 55%;
+  }
+
+  #skillsDetails ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #experienceDetails,
+  #educationDetails {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  footer {
+    padding: 40px;
+  }
+}
