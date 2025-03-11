@@ -12,6 +12,10 @@ body {
     color:#fff1ff;
 }
 
+a {
+    text-decoration: none;
+}
+
 header.horizontal {
 background-color: #e54fe2;
 opacity: 0.7;
@@ -139,6 +143,10 @@ section.homepanel:nth-child(even) {
     background-color: #ee00de7a;
 }
 
+section.homepanel a {
+    color: #fff1ff;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -234,4 +242,15 @@ section.homepanel:nth-child(even) {
         font-size: 0.85rem;
     }
 }
+
+#flexboxfroggy {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #flexboxfroggy:hover {
+    transform: scale(2.5);
+    position: relative;
+    z-index: 10;
+  }
+  
 
