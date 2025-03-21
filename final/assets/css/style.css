@@ -1,0 +1,94 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf5f7; /* Soft blush */
+      
+  }
+  
+  /* Navigation bar with a rich magenta shade */
+  nav {
+    background-color: #D81B60; /* Raspberry magenta */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  /* Bubble-style links with a warm gold tone */
+  nav a {
+    display: inline-block;
+    background-color: #D4AF37; /* Antique gold */
+    color: #4B1E38; /* Deep plum text for contrast */
+    text-align: center;
+    padding: 14px 20px;
+    margin: 5px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 100px;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    background-color: #b9972e; /* Darker gold on hover */
+    transform: scale(1.05);
+  }
+  
+  /* Header section */
+  header {
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f0eb; /* Soft cream tone */
+    color: #4B1E38; /* Deep plum */
+  }
+  
+  /* Main content */
+  main {
+    padding: 20px;
+    color: #333;
+  }
+
+  /* Articles section */
+.articles {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  
+  .article-box {
+    flex: 1 1 calc(20% - 20px);
+    background-color: #fef8ec; /* soft golden cream */
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .article-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .article-box h3 {
+    color: #D81B60; /* magenta header */
+    margin-bottom: 10px;
+  }
+  
+  .article-box p {
+    color: #333;
+    font-size: 0.95rem;
+  }
+  
+  
+  
+  
+  
+  
