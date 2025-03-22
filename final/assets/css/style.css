@@ -164,6 +164,25 @@ main {
   }
 }
 
+/* Optional titles or text inside image boxes */
+.home-image-left h2,
+.home-image-right h2 {
+  font-size: 1.2rem;
+  color: #D81B60; /* Magenta */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.home-image-left p,
+.home-image-right p {
+  font-size: 0.95rem;
+  color: #4B1E38; /* Deep plum */
+  text-align: center;
+  margin: 0;
+  line-height: 1.4;
+}
+
+
 
 /* -----------------------
    Article Grid
