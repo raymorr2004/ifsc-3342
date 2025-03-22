@@ -1,149 +1,333 @@
-/* Base styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fdf5f7; /* Soft blush */
-      
-  }
-  
-  /* Navigation bar with a rich magenta shade */
-  nav {
-    background-color: #D81B60; /* Raspberry magenta */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0;
-    flex-wrap: wrap;
-  }
-  
-  /* Bubble-style links with a warm gold tone */
-  nav a {
-    display: inline-block;
-    background-color: #D4AF37; /* Antique gold */
-    color: #4B1E38; /* Deep plum text for contrast */
-    text-align: center;
-    padding: 14px 20px;
-    margin: 5px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    min-width: 100px;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    background-color: #b9972e; /* Darker gold on hover */
-    transform: scale(1.05);
-  }
-  
-  /* Header section */
-  header {
-    padding: 20px;
-    text-align: center;
-    background-color: #f8f0eb; /* Soft cream tone */
-    color: #4B1E38; /* Deep plum */
-  }
-  
-  /* Main content */
-  main {
-    padding: 20px;
-    color: #333;
-  }
+/* -----------------------
+   Sticky Footer Layout Setup
+------------------------ */
 
-  /* Articles section */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+
+/* -----------------------
+   Base Styles – Mobile First
+------------------------ */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdf5f7; /* Soft blush */
+}
+
+/* -----------------------
+   Navigation
+------------------------ */
+
+nav {
+  background-color: #D81B60; /* Raspberry magenta */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+
+nav a {
+  display: inline-block;
+  background-color: #D4AF37; /* Antique gold */
+  color: #4B1E38; /* Deep plum */
+  text-align: center;
+  padding: 10px 16px;
+  margin: 5px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  min-width: 100px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #b9972e; /* Darker gold on hover */
+  transform: scale(1.05);
+}
+
+/* -----------------------
+   Header
+------------------------ */
+
+header {
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f0eb; /* Soft cream */
+  color: #4B1E38; /* Deep plum */
+}
+
+/* -----------------------
+   Main Content
+------------------------ */
+
+main {
+  padding: 20px;
+  color: #333;
+}
+
+/* -----------------------
+   Article Grid
+------------------------ */
+
 .articles {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 40px;
-  }
-  
-  .article-box {
-    flex: 1 1 calc(20% - 20px);
-    background-color: #fef8ec; /* soft golden cream */
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .article-box img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-  }
-  
-  .article-box h3 {
-    color: #D81B60; /* magenta header */
-    margin-bottom: 10px;
-  }
-  
-  .article-box p {
-    color: #333;
-    font-size: 0.95rem;
-  }
-  
-  .social-media-panel {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 30px 20px;
-    background-color: #fdf5f7;
-    border-top: 2px solid #D4AF37;
-    border-bottom: 2px solid #D4AF37;
-  }
-  
-  .social-link {
-    background-color: #fef8ec;
-    border-radius: 12px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-    max-height: 110px; /* Adjusted height to show image + header */
-    cursor: pointer;
-  }
-  
-  .social-link.expanded {
-    max-height: 300px;
-  }
-  
-  .social-link img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
-  }
-  
-  .social-link h4 {
-    margin: 10px 0 8px;
-    color: #D81B60;
-  }
-  
-  /* Description hidden by default */
-  .social-link p {
-    display: none;
-  }
-  
-  .social-link.expanded p {
-    display: block;
-  }
-  
-  /* Style all <a> elements inside <p> tags in social-link blocks */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 0 20px;
+  align-items: start;
+}
+
+
+
+.article-box {
+  background-color: #fef8ec; /* Soft golden cream */
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.article-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.article-box h3 {
+  color: #D81B60;
+  margin-bottom: 10px;
+}
+
+.article-box p {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* -----------------------
+   Social Media Grid
+------------------------ */
+
+.social-media-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 30px 20px;
+  background-color: #fdf5f7;
+  border-top: 2px solid #D4AF37;
+  border-bottom: 2px solid #D4AF37;
+}
+
+.social-link {
+  background-color: #fef8ec;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  max-height: 110px; /* Show image + header */
+  cursor: pointer;
+}
+
+.social-link.expanded {
+  max-height: 300px;
+}
+
+.social-link img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.social-link h4 {
+  margin: 10px 0 8px;
+  color: #D81B60;
+}
+
+.social-link p {
+  display: none;
+}
+
+.social-link.expanded p {
+  display: block;
+}
+
+/* -----------------------
+   Game Grid
+------------------------ */
+
+.game-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 30px 20px;
+  background-color: #fdf5f7;
+  border-top: 2px solid #D4AF37;
+  border-bottom: 2px solid #D4AF37;
+}
+
+.game-card {
+  background-color: #fef8ec;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  max-height: 110px;
+  cursor: pointer;
+}
+
+.game-card.expanded {
+  max-height: 300px;
+}
+
+.game-card img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.game-card h4 {
+  margin: 10px 0 8px;
+  color: #D81B60;
+}
+
+.game-card p {
+  display: none;
+}
+
+.game-card.expanded p {
+  display: block;
+}
+
+/* Match social-link <a> style for game cards */
+.game-card p a {
+  color: #4B1E38; /* Deep plum to match your theme */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.game-card p a:hover {
+  color: #D81B60; /* Magenta on hover */
+  text-decoration: none;
+}
+
+
+
+/* Link styling inside social descriptions */
 .social-link p a {
-  color: #4B1E38; /* Deep plum (to match your theme) */
+  color: #4B1E38;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .social-link p a:hover {
-  color: #D81B60; /* Magenta on hover */
+  color: #D81B60;
   text-decoration: none;
 }
+
+/* Footer CSS */
+
+.site-footer {
+  background-color: #f8f0eb; /* Soft cream tone */
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  color: #4B1E38; /* Deep plum */
+  border-top: 1px solid #D4AF37;
+}
+
+.site-footer a.footer-link {
+  color: #D81B60; /* Magenta */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer a.footer-link:hover {
+  color: #b9972e; /* Gold on hover */
+  text-decoration: underline;
+}
+
+/* Collapse article content by default on the About page */
+#about-page .article-box > *:not(h3) {
+  display: none;
+}
+
+#about-page .article-box.expanded > * {
+  display: block;
+}
+
+#about-page .article-box.expanded h3 {
+  margin-bottom: 10px;
+  /* You can remove this if you want zero visual change */
+}
+
+
+/* -----------------------
+   Media Queries
+------------------------ */
+
+/* Tablet: 768px and up */
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .articles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .social-media-panel, .game-panel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop: 1024px and up */
+@media (min-width: 1024px) {
+  .articles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .social-media-panel, .game-panel {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop: 1200px and up */
+@media (min-width: 1200px) {
+  .articles {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .social-media-panel, .game-panel {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 
   
   
