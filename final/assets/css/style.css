@@ -82,6 +82,90 @@ main {
 }
 
 /* -----------------------
+   Welcome Section
+------------------------ */
+
+/* Home Welcome Grid */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+/* Shared styling for left and right image containers */
+.home-image-left,
+.home-image-right {
+  display: none; /* Hidden by default (mobile-first) */
+  background-color: #fef8ec; /* Soft golden cream */
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.home-image-left img,
+.home-image-right img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Welcome message styled like a content card */
+.welcome-message {
+  background-color: #fef8ec;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  color: #4B1E38; /* Deep plum text */
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Heading styled like other magenta elements */
+.welcome-message h2 {
+  color: #D81B60; /* Magenta */
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* Paragraph spacing and readability */
+.welcome-message p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Link style inside welcome section */
+.welcome-message a {
+  color: #4B1E38;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.welcome-message a:hover {
+  color: #D81B60;
+  text-decoration: none;
+}
+
+/* Show side images on larger screens */
+@media (min-width: 1024px) {
+  .home-grid {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .home-image-left,
+  .home-image-right {
+    display: block;
+  }
+}
+
+
+/* -----------------------
    Article Grid
 ------------------------ */
 
