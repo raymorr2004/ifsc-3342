@@ -243,11 +243,11 @@ section.homepanel a {
     }
 }
 
-#flexboxdefense {
+#flexboxdefense, #finalplanning {
     transition: transform 0.3s ease-in-out;
   }
   
-  #flexboxdefense:hover {
+  #flexboxdefense:hover, #finalplanning:hover {
     transform: scale(2.5);
     position: relative;
     z-index: 10;
