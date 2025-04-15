@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+
+.top-left-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 16px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+  }
+  
+  .top-left-button:hover {
+    background-color: #555;
+  }
+  
+  img {
+    display: block;
+    max-width: 90%;
+    height: auto;
+    margin: 100px auto 40px auto; /* Leaves room for button at top */
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  

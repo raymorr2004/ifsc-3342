@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Parthenon Image</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <a href="/index.html" class="top-left-button">Back to Assignments</a>
+
+  <img 
+    src="assets/img/parthenon_400.jpg" 
+    srcset="
+      assets/img/parthenon_3000.jpg 3000w,
+      assets/img/parthenon_2000.jpg 2000w,
+      assets/img/parthenon_1000.jpg 1000w,
+      assets/img/parthenon_600.jpg 600w,
+      assets/img/parthenon_400.jpg 400w
+    "
+    sizes="(max-width: 400px) 400px,
+           (max-width: 600px) 600px,
+           (max-width: 1000px) 1000px,
+           (max-width: 2000px) 2000px,
+           3000px"
+    alt="Parthenon">
+</body>
+</html>
+
